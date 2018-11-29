@@ -3,7 +3,7 @@ services:
     - docker
 
 before_install:
-    - docker build -t WORKFLW-IMAGE -f Dockerfile.dev .
+    - docker build -t workflow-image -f Dockerfile.dev .
 
 script:
-    - docker run WORKFLW-IMAGE npm run test -- --coverage    
+    - docker run workflow-image npm run test -- --coverage    
